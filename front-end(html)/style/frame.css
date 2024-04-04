@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    z-index: -5;
+}
+u{
+    color: #2DCFBC;
+}
+.titleBar{
+    background-color: #2DCFBC;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4vh;
+    z-index: 10;
+    padding: 10px;
+}
+.Title{
+    display: flex;
+}
+.titleText{
+    margin-left: 0;
+    margin-right: 8px;
+    font-size: 3vh;
+    font-weight: bold;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#titleIcon{
+    width: 4vh;
+    display: flex;
+    align-items: center;
+}
+#userIcon{
+    width: 4vh;
+    display: flex;
+    align-items: center;
+}
+#btn_login{
+    padding: 0.2vh;
+    font-size: 20px;
+    border: solid;
+    border-color: #FFFFFF;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pageBar{
+    position: fixed;
+    background-color: #4AB8AA;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    top:4vh;
+}
+.pageTxt{
+    font-size: 2.5vh;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 0 50px;
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+{
+  "user": "",
+  "password": "",
+  "server": "", 
+  "database": "",
+  "options":{
+    "enableArithAbort": true,
+    "encrypt": false,
+    "trustServerCertificate": true
+  }
+}

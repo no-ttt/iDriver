@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>iDriver道路資訊輔助系統</title>
+    <link rel="stylesheet" type="text/css" href="style/frame.css">
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+
+    <script src="script/scrollTointrol.js"></script>
+    <script src="script/controlList.js"></script>
+    <script src="script/checkboxStatus.js"></script>
+</head>
+
+<body>
+    <div class="titleBar">
+        <div class="Title">
+            <span class="titleText">iDriver道路資訊輔助系統</span>
+            <img id="titleIcon" src="pictures/icon.png"/>
+        </div>
+        <div class="Title">
+            <img id="userIcon" src="pictures/user.png" />
+            <span id="login-txt" class="titleText"></span>
+        </div>
+    </div>
+
+    <div class="pageBar">
+        <a href="home.html"><img id="go-home" src="pictures/home.png" /></a>
+    </div>
+
+    <div>
+        <button id="function_close" class="function_control" style="background-image: url('pictures/btn_list _open.png');" onclick="openList();"></button>
+    </div>
+
+    <div id="function_click">
+        <div id="function_list_control">
+
+            <div class="function-content">
+                <div class="function-item">
+                    <input type="checkbox" id="traffic_info" class="switch">
+                    <label for="traffic_info">即時道路資訊</label>
+                </div>
+                <p class="function-text">ex.路況資訊、天氣概況、危險路段(歷年資料分析)</p>
+            </div>
+            <div class="function-content">
+                <div class="function-item">
+                    <input type="checkbox" id="speed_camera_alert" class="switch">
+                    <label for="speed_camera_alert">測速照相警示</label>
+                </div>
+            </div>
+            <div class="function-content">
+                <div class="function-item">
+                    <input type="checkbox" id="voice_query" class="switch">
+                    <label for="voice_query">語音查詢</label>
+                </div>
+                <p class="function-text">使用麥克風語音輸入欲查詢資訊</br>
+                    ex.日月潭的天氣狀況、國道三號的路況如何... </p>
+            </div>
+            <hr>
+            <div class="function-content">
+                <div class="function-item">
+                    <input type="checkbox" id="route" class="switch">
+                    <label for="voice_query">路線規劃</label>
+                </div>
+                <div class="function-item">
+                    <span>起點 <input type="text" id="destination-start" class="text-input"></span>
+
+                    <!--搜尋地點-->
+                    <div><button id="search-startpoint" class="child-btn1" style="background-image: url('pictures/searchPoint.png')" onclick=""></button></div>
+                    <!--定位使用者-->
+                    <div><button id="userpoint-start" class="child-btn2" style="background-image: url('pictures/position.png')" onclick=""></button></div>
+                
+                </div>
+                <div class="function-item">
+                    <span>終點 <input type="text" id="destination-end" class="text-input"></span>
+                    <div><button id="search-endpoint" class="child-btn1" style="background-image: url('pictures/searchPoint.png')" onclick=""></button></div>
+                    <div><button id="userpoint-end" class="child-btn2" style="background-image: url('pictures/switch_point.png')" onclick=""></button></div>
+                </div>
+
+                <!--路線規劃、導航按鈕-->
+                <div class="function-item2">
+                    <div><button id="create-route" class="btn-route1" style="background-image: url('pictures/createroute.png');" onclick="">生成路線</button></div>
+                    <div><button id="go-route" class="btn-route2"  style="background-image: url('pictures/routego.png');" onclick="">開始導航</button></div>
+                </div>
+
+            </div>
+        </div>
+        
+        <button id="function_open" class="function_control" style="background-image: url('pictures/btn_list _close.png');" onclick="closeList();"></button>
+    </div>
+    
+    <div class="function_area">
+        <div class="map_containner"></div>  <!--挖給地圖的洞洞-->
+        <div class="sh_info">
+            <div id="poi_log"></div>        <!--顯示地圖資訊-->
+            <div id="speed_limit"></div>    <!--顯示限速警告-->
+        </div>
+    </div>
+
+</body>
+
+</html>

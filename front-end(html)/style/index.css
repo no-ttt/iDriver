@@ -1,0 +1,211 @@
+.function_containner{
+    display: flex;
+    align-items: center;
+}
+
+.function_control{
+    top: 50vh;
+    height: 5vh;
+    width: 3vh;
+    background-color: #2DCFBC;
+    border: none;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: 1.5vh;
+    background-position: center center;
+    position: fixed;
+    display: flex;
+    align-items: center;
+
+}
+#function_click{
+    position: fixed;
+    left: -100vw; 
+    display: flex;
+    align-items: center;
+    transition: left 0.5s;
+}
+
+#function_list_control{
+    overflow: auto;
+    height: 85vh;
+    width: 20vw;
+    background-color: white;
+
+    border-color: #2DCFBC;
+    border-width: 3px;
+    border-radius: 10px;
+    border-style: solid;
+}
+#function_open {
+    background-image: url('pictures/btn_list _close.png');
+    margin-top: 0;
+    margin-left: 20.3vw;
+}
+
+/*滑動按鈕*/
+label{
+    color: rgb(65, 65, 65);
+    font-size: 22px;
+    font-weight: bold;
+    margin: 1vh;
+}
+hr{
+    margin: 20px;
+}
+span{
+    font-weight: bold;
+    margin-left: 3vh;
+}
+input{
+    height: 20px;
+}
+.function-text{
+    color: rgb(128, 128, 128);
+    margin-top: 0;
+    margin-left: 8vh;
+}
+.function-item {
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-items: left;
+    padding: 3%;
+    margin-left: 1vw;
+}
+.function-item2 {
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3vh;
+}
+.switch {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    min-width: 45px;
+    background-color: white;
+    border-color: #b4b4b4;
+    border-radius: 20px;
+    border-style: solid;
+    position: relative;
+}
+.switch::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: #b4b4b4;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    transition: transform 0.3s;
+}
+.switch:checked::before {
+    transform: translateX(25px);
+    background-color: #2DCFBC; /* 滑动到右侧时的颜色 */
+}
+.child-btn1{
+    display: flex;
+    width: 22px;
+    height: 22px;
+    border: none;
+    background-size: cover;
+    background-color: white;
+}
+.btn-route1, .btn-route2, .child-btn2, .child-btn1, .function_control:hover{
+    cursor: pointer;
+}
+.child-btn2{
+    display: flex;
+    margin-left: 1vh;
+    width: 22px;
+    height: 22px;
+    border: none;
+    background-size: cover;
+    background-color: rgb(211, 211, 211);
+    border-radius: 5px;
+}
+.btn-route1{
+    margin-right: 3vh;
+    display: flex;
+    width: 12vh;
+    background-color: white;
+    border-radius: 5px;
+    border-width: 10px;
+    border: 2px solid rgb(198, 198, 198);
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    font-size: 2vh;
+    text-align: left;
+    font-weight: bold;
+    color: rgb(108, 108, 108);
+}
+.btn-route2{
+    width: 12vh;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(198, 198, 198);
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    font-size: 2vh;
+    text-align: left;
+    font-weight: bold;
+    color: rgb(108, 108, 108);
+}
+/************/
+
+
+.function_area{
+    margin-top: 12vh;
+    margin-left: 8vh;
+    margin-right: 8vh;
+}
+.map_containner{
+    height: 60vh;
+    background-color: rgb(219, 219, 219);
+}
+.sh_info{
+    margin-top: 1.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*顯示POI資訊*/
+#poi_log{
+    width: 70%;
+    height: 20vh;
+    border-radius: 10px;
+    padding: 2vh;
+    background-color: rgb(220, 220, 220);
+}
+/*顯示測速照相警示*/
+#speed_limit{
+    margin-left: 2vh;
+    width: 50vh;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#go-home{
+    width: 4vh;
+}
+#go-home:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 1520px) {
+    #function_list_control{
+        width: 92vw;
+    }
+    #function_open {
+        margin-top: 0;
+        margin-left: 92.3vw;
+    }
+
+}

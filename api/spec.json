@@ -1,0 +1,72 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "LBSE API",
+    "version": "1.0.0",
+    "description": "Generate LBSE API document with swagger."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8888",
+      "description": "LBSE"
+    }
+  ],
+  "paths": {
+    "/LBSE": {
+      "get": {
+        "summary": "給予經緯度回傳地址或附近 POIs。",
+        "parameters": [
+          {
+            "name": "Lat",
+            "required": true,
+            "in": "query",
+            "description": "緯度",
+            "schema": {
+              "type": "number",
+              "format": "float"
+            }
+          },
+          {
+            "name": "Lon",
+            "required": true,
+            "in": "query",
+            "description": "經度",
+            "schema": {
+              "type": "number",
+              "format": "float"
+            }
+          },
+          {
+            "name": "Range",
+            "required": false,
+            "in": "query",
+            "description": "範圍 (1：100 公尺, 3：300 公尺... 以此類推)",
+            "schema": {
+              "type": "number",
+              "format": "int"
+            }
+          },
+          {
+            "name": "Key",
+            "required": true,
+            "in": "query",
+            "description": "Token",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          },
+          "404": {
+            "description": "error"
+          }
+        }
+      }
+    }
+  },
+  "components": {},
+  "tags": []
+}
